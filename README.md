@@ -17,7 +17,7 @@ npm install vue-gridlayout
 
 ```javascript
 import Vue from 'vue';
-import { VGrid } from 'vue-grid';
+import { VGrid } from 'vue-gridlayout';
 import App from './App';
 
 Vue.config.productionTip = false;
@@ -34,7 +34,7 @@ new Vue({
 ### Import locally
 
 ```javascript
-import { VGrid, VGridItem } from 'vue-grid';
+import { VGrid, VGridItem } from 'vue-gridlayout';
 
 export default {
   name: 'app',

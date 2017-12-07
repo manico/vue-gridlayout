@@ -10,7 +10,7 @@ var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 var env = config.lib.env
 
 baseWebpackConfig.entry = {
-  'vue-grid': './src/lib.js'
+  'vue-gridlayout': './src/lib.js'
 }
 
 var webpackConfig = merge(baseWebpackConfig, {

@@ -10,7 +10,7 @@ function resolve(dir) {
 module.exports = {
   entry: {
     docs: './src/docs.js',
-    ['vue-grid']: './src/lib.js'
+    ['vue-gridlayout']: './src/lib.js'
   },
   output: {
     path: config.build.assetsRoot,

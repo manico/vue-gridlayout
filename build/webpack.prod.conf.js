@@ -65,7 +65,7 @@ var webpackConfig = merge(baseWebpackConfig, {
     }),
     // split your library css/js into separate files
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'vue-grid'
+      name: 'vue-gridlayout'
     }),
     // split vendor js into its own file
     new webpack.optimize.CommonsChunkPlugin({
