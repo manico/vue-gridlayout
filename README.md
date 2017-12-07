@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/manico/vue-grid.svg?branch=master)](https://travis-ci.org/manico/vue-grid) [![codecov](https://codecov.io/gh/manico/vue-grid/branch/master/graph/badge.svg)](https://codecov.io/gh/manico/vue-grid)
+[![Build Status](https://travis-ci.org/manico/vue-grid.svg?branch=master)](https://travis-ci.org/manico/vue-grid)
 
 # vue-grid
 
