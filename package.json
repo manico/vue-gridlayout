@@ -1,6 +1,6 @@
 {
   "name": "vue-gridlayout",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Vue implementation of css grid layout",
   "author": "jadranko.dragoje@gmail.com",
   "main": "dist/lib/vue-grid.min.js",
@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/manico/vue-grid.git"
+    "url": "https://github.com/manico/vue-gridlayout.git"
   },
   "dependencies": {
     "vue": "^2.3.3"

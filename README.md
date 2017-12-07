@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/manico/vue-grid.svg?branch=master)](https://travis-ci.org/manico/vue-grid)
+[![Build Status](https://travis-ci.org/manico/vue-gridlayout.svg?branch=master)](https://travis-ci.org/manico/vue-gridlayout)
 
-# vue-grid
+# vue-gridlayout
 
 > Vue implementation of css grid layout
 
