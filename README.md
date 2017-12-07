@@ -8,7 +8,7 @@
 
 ```bash
 # npm
-npm install vue-grid
+npm install vue-gridlayout
 ```
 
 ## Using
