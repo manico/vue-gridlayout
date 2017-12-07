@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <v-grid template-columns="2fr 1fr 1fr"
-            auto-rows="100px"
+    <v-grid class="grid"
+            template-columns="2fr 1fr 1fr"
+            :auto-rows="['50px', '120px']"
+            :template-areas="['a b', 'a b']"
             gap="10px">
       <v-grid-item :column-start="1"
                    :column-end="4">
