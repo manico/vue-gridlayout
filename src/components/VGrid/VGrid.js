@@ -2,6 +2,7 @@ import { isObject } from '../../util';
 import alignmentItemValues from '../../validation/alignmentItemValues';
 import alignmentContentValues from '../../validation/alignmentContentValues';
 import writingModeValues from '../../validation/writingModeValues';
+import autoFlowValues from '../../validation/autoFlowValues';
 
 const resolveAreas = (input) => {
   let output;
@@ -79,6 +80,9 @@ export default {
     },
     autoFlow: {
       type: String,
+      validator(value) {
+        return autoFlowValues.indexOf(value) > -1;
+      },
     },
     autoRows: {
       type: [String, Array],
