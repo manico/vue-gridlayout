@@ -57,6 +57,13 @@ export default {
     stackIndex: {
       type: Number,
     },
+    tag: {
+      type: String,
+      default: 'div',
+      validator(value) {
+        return value.length > 0;
+      },
+    },
   },
   data() {
     return {
@@ -79,7 +86,7 @@ export default {
   methods: {
   },
   render(h) {
-    return h('div', {
+    return h(this.tag, {
       style: {
         alignSelf: this.align,
         gridArea: this.area,

@@ -108,6 +108,13 @@ export default {
     rowGap: {
       type: String,
     },
+    tag: {
+      type: String,
+      default: 'div',
+      validator(value) {
+        return value.length > 0;
+      },
+    },
     templateAreas: {
       type: [String, Array],
     },
@@ -155,7 +162,7 @@ export default {
   methods: {
   },
   render(h) {
-    return h('div', {
+    return h(this.tag, {
       style: {
         alignContent: this.alignContent,
         justifyContent: this.justifyContent,

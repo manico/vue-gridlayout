@@ -68,6 +68,17 @@
       <v-grid-item area="c">Three</v-grid-item>
       <v-grid-item area="d">Four</v-grid-item>
     </v-grid>
+    <!-- Custom tags -->
+    <v-grid class="grid grid-f"
+            template-columns="1fr 2fr"
+            :auto-rows="['50px', '120px']"
+            gap="10px">
+      <v-grid-item tag="header">Header</v-grid-item>
+      <v-grid-item>One</v-grid-item>
+      <v-grid-item>Two</v-grid-item>
+      <v-grid-item>Three</v-grid-item>
+      <v-grid-item tag="footer">Footer</v-grid-item>
+    </v-grid>
   </div>
 </template>
 
