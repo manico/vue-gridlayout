@@ -4,13 +4,19 @@
 
 > Vue implementation of css grid layout https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout
 
-WARNING: This implementation is in `alpha` and there are more features to come, like support for box alignment. This is not ready for production until we hit 1.0.0. Pull Requests are welcomed.
+WARNING: This implementation is in `alpha` and there are more features, tests and examples to come. This is not ready for production until we hit 1.0.0. Pull Requests are welcomed.
 
 ## Installation
 
 ```bash
 # npm
 npm install vue-gridlayout
+```
+
+or include it from Unpkg CDN in your html
+
+```html
+<script src="https://unpkg.com/vue-gridlayout"></script>
 ```
 
 ## Using
@@ -74,4 +80,6 @@ export default {
 </template>
 ```
 
-More examples are coming.
+### Documentation and Examples
+
+https://manico.github.io/vue-gridlayout/
