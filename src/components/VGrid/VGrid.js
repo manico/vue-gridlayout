@@ -93,6 +93,10 @@ export default {
     gap: {
       type: [String, Array],
     },
+    isInline: {
+      type: Boolean,
+      default: false,
+    },
     justifyContent: {
       type: String,
       validator(value) {
@@ -142,6 +146,9 @@ export default {
     gridAutoColumns() {
       return resolveSize(this.autoColumns);
     },
+    gridDisplay() {
+      return this.isInline ? 'inline-grid' : 'grid';
+    },
     gridGap() {
       if (this.rowGap && this.columnGap) {
         return `${this.rowGap} ${this.columnGap}`;
@@ -168,7 +175,7 @@ export default {
         justifyContent: this.justifyContent,
         alignItems: this.alignItems,
         justifyItems: this.justifyItems,
-        display: 'grid',
+        display: this.gridDisplay,
         gridTemplateAreas: this.gridTemplateAreas,
         gridAutoColumns: this.gridAutoColumns,
         gridAutoFlow: this.autoFlow,
