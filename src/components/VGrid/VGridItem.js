@@ -1,3 +1,5 @@
+import alignmentItemValues from '../../validation/alignmentItemValues';
+
 const resolveSize = (input, span) => {
   if (Number.isInteger(input) && span) {
     return `span ${input}`;
@@ -9,6 +11,12 @@ const resolveSize = (input, span) => {
 export default {
   name: 'v-grid-item',
   props: {
+    align: {
+      type: String,
+      validator(value) {
+        return alignmentItemValues.indexOf(value) > -1;
+      },
+    },
     area: {
       type: String,
     },
@@ -25,6 +33,12 @@ export default {
     columnEndSpan: {
       type: Boolean,
       default: false,
+    },
+    justify: {
+      type: String,
+      validator(value) {
+        return alignmentItemValues.indexOf(value) > -1;
+      },
     },
     rowStart: {
       type: [Number, String],
@@ -67,11 +81,13 @@ export default {
   render(h) {
     return h('div', {
       style: {
+        alignSelf: this.align,
         gridArea: this.area,
         gridColumnStart: this.gridColumnStart,
         gridColumnEnd: this.gridColumnEnd,
         gridRowStart: this.gridRowStart,
         gridRowEnd: this.gridRowEnd,
+        justifySelf: this.justify,
         zIndex: this.stackIndex,
       },
     }, this.$slots.default);

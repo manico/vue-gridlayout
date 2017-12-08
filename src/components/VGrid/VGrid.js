@@ -1,4 +1,5 @@
 import { isObject } from '../../util';
+import alignmentItemValues from '../../validation/alignmentItemValues';
 
 const resolveAreas = (input) => {
   let output;
@@ -38,19 +39,19 @@ const resolveSizeObject = (input, isRepeatable, isNameable) => {
   return output;
 };
 
-const resolveSize = (input) => {
+const resolveSize = (input, isRepeatable, isNameable) => {
   let output;
 
   if (Array.isArray(input)) {
     if (input.length === 1) {
-      output = resolveSizeObject(input[0]);
+      output = resolveSizeObject(input[0], isRepeatable, isNameable);
     } else if (input.length === 2) {
       output = `minmax(${input[0]}, ${input[1]})`;
     } else {
-      output = input.map(n => resolveSizeObject(n)).join(' ');
+      output = input.map(n => resolveSizeObject(n, isRepeatable, isNameable)).join(' ');
     }
   } else {
-    output = resolveSizeObject(input);
+    output = resolveSizeObject(input, isRepeatable, isNameable);
   }
 
   return output;
@@ -59,6 +60,12 @@ const resolveSize = (input) => {
 export default {
   name: 'v-grid',
   props: {
+    alignItems: {
+      type: String,
+      validator(value) {
+        return alignmentItemValues.indexOf(value) > -1;
+      },
+    },
     autoColumns: {
       type: [String, Array],
     },
@@ -70,6 +77,12 @@ export default {
     },
     gap: {
       type: [String, Array],
+    },
+    justifyItems: {
+      type: String,
+      validator(value) {
+        return alignmentItemValues.indexOf(value) > -1;
+      },
     },
     rowGap: {
       type: String,
@@ -117,6 +130,8 @@ export default {
   render(h) {
     return h('div', {
       style: {
+        alignItems: this.alignItems,
+        justifyItems: this.justifyItems,
         display: 'grid',
         gridTemplateAreas: this.gridTemplateAreas,
         gridAutoColumns: this.gridAutoColumns,
