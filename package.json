@@ -1,6 +1,6 @@
 {
   "name": "vue-gridlayout",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Vue implementation of css grid layout",
   "author": "jadranko.dragoje@gmail.com",
   "main": "dist/lib/vue-gridlayout.min.js",

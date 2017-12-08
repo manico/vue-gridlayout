@@ -1,6 +1,7 @@
 import { isObject } from '../../util';
 import alignmentItemValues from '../../validation/alignmentItemValues';
 import alignmentContentValues from '../../validation/alignmentContentValues';
+import writingModeValues from '../../validation/writingModeValues';
 
 const resolveAreas = (input) => {
   let output;
@@ -109,6 +110,12 @@ export default {
     templateRows: {
       type: [String, Array],
     },
+    writingMode: {
+      type: String,
+      validator(value) {
+        return writingModeValues.indexOf(value) > -1;
+      },
+    },
   },
   data() {
     return {
@@ -154,6 +161,7 @@ export default {
         gridGap: this.gridGap,
         gridTemplateColumns: this.gridTemplateColumns,
         gridTemplateRows: this.gridTemplateRows,
+        writingMode: this.writingMode,
       },
     }, this.$slots.default);
   },
