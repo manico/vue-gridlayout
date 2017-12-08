@@ -1,3 +1,4 @@
+import { isUndefined } from '../../util';
 import alignmentItemValues from '../../validation/alignmentItemValues';
 
 const resolveSize = (input, span) => {
@@ -86,17 +87,21 @@ export default {
   methods: {
   },
   render(h) {
+    const style = {
+      alignSelf: this.align,
+      justifySelf: this.justify,
+      zIndex: this.stackIndex,
+    };
+
+    // Undefined properties do not produce good render
+    if (!isUndefined(this.gridArea)) style.gridArea = this.gridArea;
+    if (!isUndefined(this.gridColumnStart)) style.gridColumnStart = this.gridColumnStart;
+    if (!isUndefined(this.gridColumnEnd)) style.gridColumnEnd = this.gridColumnEnd;
+    if (!isUndefined(this.gridRowEnd)) style.gridRowEnd = this.gridRowEnd;
+    if (!isUndefined(this.gridRowStart)) style.gridRowStart = this.gridRowStart;
+
     return h(this.tag, {
-      style: {
-        alignSelf: this.align,
-        gridArea: this.area,
-        gridColumnStart: this.gridColumnStart,
-        gridColumnEnd: this.gridColumnEnd,
-        gridRowStart: this.gridRowStart,
-        gridRowEnd: this.gridRowEnd,
-        justifySelf: this.justify,
-        zIndex: this.stackIndex,
-      },
+      style,
     }, this.$slots.default);
   },
 };
