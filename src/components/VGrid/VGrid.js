@@ -1,5 +1,6 @@
 import { isObject } from '../../util';
 import alignmentItemValues from '../../validation/alignmentItemValues';
+import alignmentContentValues from '../../validation/alignmentContentValues';
 
 const resolveAreas = (input) => {
   let output;
@@ -60,6 +61,12 @@ const resolveSize = (input, isRepeatable, isNameable) => {
 export default {
   name: 'v-grid',
   props: {
+    alignContent: {
+      type: String,
+      validator(value) {
+        return alignmentContentValues.indexOf(value) > -1;
+      },
+    },
     alignItems: {
       type: String,
       validator(value) {
@@ -77,6 +84,12 @@ export default {
     },
     gap: {
       type: [String, Array],
+    },
+    justifyContent: {
+      type: String,
+      validator(value) {
+        return alignmentContentValues.indexOf(value) > -1;
+      },
     },
     justifyItems: {
       type: String,
@@ -130,6 +143,8 @@ export default {
   render(h) {
     return h('div', {
       style: {
+        alignContent: this.alignContent,
+        justifyContent: this.justifyContent,
         alignItems: this.alignItems,
         justifyItems: this.justifyItems,
         display: 'grid',

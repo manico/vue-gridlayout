@@ -39,6 +39,19 @@
         Centered
       </v-grid-item>
     </v-grid>
+    <!-- Align content -->
+    <v-grid class="grid grid-d"
+            :template-columns="[{ repeat: { count: 3, value: '100px' } }]"
+            :template-rows="[{ repeat: { count: 3, value: '100px' } }]"
+            :template-areas="['a a b', 'a a b', 'c d d']"
+            gap="10px"
+            align-content="space-between"
+            justify-content="space-around">
+      <v-grid-item area="a"></v-grid-item>
+      <v-grid-item area="b"></v-grid-item>
+      <v-grid-item area="c"></v-grid-item>
+      <v-grid-item area="d"></v-grid-item>
+    </v-grid>
   </div>
 </template>
 
