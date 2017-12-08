@@ -25,7 +25,7 @@ or include it from Unpkg CDN in your html
 
 ```javascript
 import Vue from 'vue';
-import { VGrid } from 'vue-gridlayout';
+import VGrid from 'vue-gridlayout';
 import App from './App';
 
 Vue.config.productionTip = false;

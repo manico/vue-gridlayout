@@ -83,13 +83,7 @@
 </template>
 
 <script>
-  import { VGrid, VGridItem } from './components/VGrid';
-
   export default {
     name: 'app',
-    components: {
-      VGrid,
-      VGridItem,
-    },
   };
 </script>
