@@ -77,6 +77,9 @@ export default {
     autoColumns: {
       type: [String, Array],
     },
+    autoFlow: {
+      type: String,
+    },
     autoRows: {
       type: [String, Array],
     },
@@ -157,6 +160,7 @@ export default {
         display: 'grid',
         gridTemplateAreas: this.gridTemplateAreas,
         gridAutoColumns: this.gridAutoColumns,
+        gridAutoFlow: this.autoFlow,
         gridAutoRows: this.gridAutoRows,
         gridGap: this.gridGap,
         gridTemplateColumns: this.gridTemplateColumns,
