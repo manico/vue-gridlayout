@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/manico/vue-gridlayout.svg?branch=master)](https://travis-ci.org/manico/vue-gridlayout)
+[![Build Status](https://travis-ci.org/manico/vue-gridlayout.svg?branch=master)](https://travis-ci.org/manico/vue-gridlayout) [![codebeat badge](https://codebeat.co/badges/149cd9aa-0f33-4483-afc5-65e7f9b163bc)](https://codebeat.co/projects/github-com-manico-vue-gridlayout-master)
 
 # vue-gridlayout
 
