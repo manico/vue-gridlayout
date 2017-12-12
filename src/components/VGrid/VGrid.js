@@ -9,11 +9,8 @@ const resolveAreas = (input) => {
 
   if (Array.isArray(input)) {
     output = input.map((n) => {
-      if (Array.isArray(n)) {
-        return n.map(m => `"${m}"`).join(' ');
-      }
-
-      return `"${n}"`;
+      const canMap = Array.isArray(n);
+      return canMap ? n.map(m => `"${m}"`).join(' ') : `"${n}"`;
     }).join(' ');
   } else {
     output = input;
