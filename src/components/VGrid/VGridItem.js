@@ -94,7 +94,7 @@ export default {
     };
 
     // Undefined properties do not produce good render
-    if (!isUndefined(this.gridArea)) style.gridArea = this.gridArea;
+    if (!isUndefined(this.area)) style.gridArea = this.area;
     if (!isUndefined(this.gridColumnStart)) style.gridColumnStart = this.gridColumnStart;
     if (!isUndefined(this.gridColumnEnd)) style.gridColumnEnd = this.gridColumnEnd;
     if (!isUndefined(this.gridRowEnd)) style.gridRowEnd = this.gridRowEnd;
